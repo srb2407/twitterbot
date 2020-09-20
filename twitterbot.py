@@ -1,10 +1,11 @@
 import tweepy
 import time
 
-auth = tweepy.OAuthHandler('8jDwJZkvlpWWUUt1EOxzcZafo',
-                           'iK14IzBz0LMb6ImsOurkgJufqnO1LuAZ18Zfsupc22JdKlQfPS')
-auth.set_access_token('1145579421853597696-0eevf4fmLjaixp9k5qdu0IOMPN03m7',
-                      'OAuRVJeeUGnQreVk5eN1Ym9TybcONSEgmoAyQp04OwZBJ')
+# get your own consumer key and access token by registering on twitter api
+auth = tweepy.OAuthHandler('consumer_key',
+                           'consumer_secret')
+auth.set_access_token('access_token',
+                      'acceess_token_secret')
 
 api = tweepy.API(auth)
 user = api.me()
